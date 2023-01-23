@@ -14,6 +14,7 @@ body::-webkit-scrollbar {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: -10;
   background-image: url("https://ortodontista.net/wp-content/uploads/2018/05/background-branco-1.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -26,7 +27,7 @@ main {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 500px;
+  padding: 100px;
 }
 main section {
   position: relative;
@@ -34,7 +35,7 @@ main section {
   background-repeat: repeat;
   background-position-x: left;
   background-position-y: top;
-  background-size: 8%;
+  background-size: 10%;
   margin: 0 auto;
   width: 5000px;
   height: 3000px;
@@ -42,12 +43,13 @@ main section {
 main section div {
   position: absolute;
   color: white;
-  width: 40px;
-  height: 40px;
-  font-size: 12px;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: -1;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -67,11 +69,27 @@ main section div img {
 }
 main section .div1 {
   top: 600px;
-  left: 400px;
+  left: 1000px;
   background-color: red;
+  width: 300px;
+}
+main section .div2, main section .div3, main section .div4, main section .div5 {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: rotate(90deg);
 }
 main section .div2 {
-  top: 600px;
-  left: 440px;
-  background-color: blue;
+  top: 750px;
+  left: 1050px;
+}
+main section .div3 {
+  top: 750px;
+  left: 1100px;
+}
+main section .div4 {
+  top: 750px;
+  left: 1150px;
+}
+main section .div5 {
+  top: 750px;
+  left: 1200px;
 }/*# sourceMappingURL=style.css.map */

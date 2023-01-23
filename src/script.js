@@ -6,11 +6,12 @@ let xTarget = 0;
 let yTarget = 0;
 
 
+
 displayScreen = document.getElementById('display-screen')
 
 
 displayScreen.addEventListener('mousedown', (e)=>{
-    e.prevent
+    e.preventDefault()
     x = e.offsetX;
     y = e.offsetY;
     isDrawing = true;
@@ -19,6 +20,7 @@ displayScreen.addEventListener('mousedown', (e)=>{
 
 
 displayScreen.addEventListener('mousemove', (e) => {
+    e.preventDefault()
     if (isDrawing) {
       xTarget = e.offsetX;
       yTarget = e.offsetY;
@@ -31,17 +33,20 @@ displayScreen.addEventListener('mousemove', (e) => {
       let moveY = (scrollY + yDif) < 0 ? 0 : scrollY + yDif;
 
       scroll(moveX, moveY)
+      console.log(moveX, moveY)
     }
   });
+  
+  
+  window.addEventListener('mouseup', (e) => {
+    e.preventDefault()
+      if (isDrawing) { 
+        //x = 0;
+        //y = 0;
+      isDrawing = false;
 
-
-window.addEventListener('mouseup', (e) => {
-  if (isDrawing) { 
-    x = 0;
-    y = 0;
-    isDrawing = false;
-    displayScreen.style.cursor = "default"
-  }
+      displayScreen.style.cursor = "default"
+    }
 });
 
 
@@ -57,3 +62,8 @@ function centralizeScreen(){
 
   window.scroll(scrollTargetX, scrollTargetY);
 }
+
+
+
+
+centralizeScreen()
