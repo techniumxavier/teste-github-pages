@@ -1,0 +1,103 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+.img-background {
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-image: url('https://ortodontista.net/wp-content/uploads/2018/05/background-branco-1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+main {
+
+    //background-color: #8250ff;
+    
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    
+    min-height: 100vh;
+    min-width: calc(100vw);
+    width: fit-content;
+    
+    
+    
+    padding: 500px;
+    //transform: scale(0.7);
+    
+    section {
+        position: relative;
+
+        background-image: url('../imgs/xadrez.png');
+        background-repeat: repeat;
+        background-position-x: left;
+        background-position-y: top;
+        background-size: calc(4 * 1/50 * 100%);
+
+
+ 
+        
+        margin: 0 auto;
+        width: 5000px;
+        height: 3000px;
+
+
+
+        div {
+            position: absolute;
+            //position: fixed;
+            
+            color: white;
+            //background-color: red;
+            width: 40px;
+            height: 40px;
+            font-size: 12px;
+            
+            
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            
+            user-select: none;
+/*             background-image: url('../imgs/trilho.png');
+            background-size: cover;
+            transform: rotate(90deg); */
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                user-select: none;
+                -webkit-user-drag: none;
+            }
+        }
+        
+        .div1 {
+            top: calc(15 * 40px);
+            left: calc(10 * 40px);
+            background-color: red;
+            
+        }
+    
+        .div2 {
+            top: calc(15 * 40px);
+            left: calc(11 * 40px);
+            background-color: blue;
+        }
+    }
+
+
+    //align-items: center;
+    //justify-content: space-around;
+    
+
+}

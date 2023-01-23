@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.img-background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url("https://ortodontista.net/wp-content/uploads/2018/05/background-branco-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  min-height: 100vh;
+  min-width: 100vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 500px;
+}
+main section {
+  position: relative;
+  background-image: url("../imgs/xadrez.png");
+  background-repeat: repeat;
+  background-position-x: left;
+  background-position-y: top;
+  background-size: 8%;
+  margin: 0 auto;
+  width: 5000px;
+  height: 3000px;
+}
+main section div {
+  position: absolute;
+  color: white;
+  width: 40px;
+  height: 40px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  /*             background-image: url('../imgs/trilho.png');
+              background-size: cover;
+              transform: rotate(90deg); */
+}
+main section div img {
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+}
+main section .div1 {
+  top: 600px;
+  left: 400px;
+  background-color: red;
+}
+main section .div2 {
+  top: 600px;
+  left: 440px;
+  background-color: blue;
+}/*# sourceMappingURL=style.css.map */
